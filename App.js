@@ -1,10 +1,10 @@
 
-import * as React from 'react';
-import { NavigationContainer } from '@react-navigation/native';
-import { createNativeStackNavigator } from '@react-navigation/native-stack';
- import Tabs from './src/screen/Tabs';
-import WelcomeScreen from './src/screen/WelcomeScreen';
- import ProfileScreen from './src/screen/ProfileScreen';
+// import * as React from 'react';
+// import { NavigationContainer } from '@react-navigation/native';
+// import { createNativeStackNavigator } from '@react-navigation/native-stack';
+//  import Tabs from './src/screen/Tabs';
+// import WelcomeScreen from './src/screen/WelcomeScreen';
+//  import ProfileScreen from './src/screen/ProfileScreen';
 // import Details from './src/screen/Details';
 // import HomeScreen from './src/screen/HomeScreen';
 // import LearnScreen from './src/screen/LearnScreen ';
@@ -16,13 +16,13 @@ import WelcomeScreen from './src/screen/WelcomeScreen';
 // import SignInScreen from './src/screen/SignInScreen'; 
 
 
-const App = () => {
-  return(
-    <NavigationContainer>
-      <Tabs/>
-    </NavigationContainer>
-  )
-}
+// // const App = () => {
+// //   return(
+// //     <NavigationContainer>
+// //       <Tabs/>
+// //     </NavigationContainer>
+// //   )
+// // }
 
 
 
@@ -43,66 +43,42 @@ const App = () => {
 //         <Stack.Screen name="user" component={UserScreen} /> 
 //         <Stack.Screen name="Login" component={LoginScreen} /> 
 //         <Stack.Screen name="Layout" component={Layout} /> 
-//         {/* <Stack.Screen name="SignIn" component={SignInScreen} />  */}
+//          <Stack.Screen name="SignIn" component={SignInScreen} />    
 //       </Stack.Navigator>
 //     </NavigationContainer>
 //   );
 // }
 
- export default App;
+//   export default App;
 
 
+import IconBadge from 'react-native-icon-badge';
+import React from 'react'
+import { View,Text ,Stylesheet  } from 'react-native-animatable';
 
-// import React from 'react';
-// import { Text, View } from 'react-native';
-// import {Ionicons} from 'react-native-vector-icons';
-// import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
-// import { NavigationContainer } from '@react-navigation/native';
+export default function App (){
+  const BadgeCount = 12
+  return (
+     <View style={{flexDirection: 'row',alignItems: 'center',justifyContent: 'center',}}>
+   <IconBadge
+    MainElement={
+      <View style={{backgroundColor:'blue',
+        width:50,
+        height:50,
+        margin:6
+      }}/>
+    }
+    BadgeElement={
+      <Text style={{color:'#FFFFFF'}}>{BadgeCount}</Text>
+    }
+    IconBadgeStyle={
+      {width:30,
+      height:30,
+      backgroundColor: '#FF00EE'}
+    }
+     Hidden={BadgeCount==0}
+    />
+</View>
+  )
+} 
 
-// function HomeScreen() {
-//   return (
-//     <View style={{ flex: 1, justifyContent: 'center', alignItems: 'center' }}>
-//       <Text>Home! page</Text>
-//     </View>
-//   );
-// }
-
-// function SettingsScreen() {
-//   return (
-//     <View style={{ flex: 1, justifyContent: 'center', alignItems: 'center' }}>
-//       <Text>Settings!</Text>
-//     </View>
-//   );
-// }
-
-// const Tab = createBottomTabNavigator();
-
-// export default function App() {
-//   return (
-//     <NavigationContainer>
-//       <Tab.Navigator
-//         screenOptions={({ route }) => ({
-//           tabBarIcon: ({ focused, color, size }) => {
-//             let iconName;
-
-//             if (route.name === 'Home') {
-//               iconName = focused
-//                 ? 'ios-information-circle'
-//                 : 'ios-information-circle-outline';
-//             } else if (route.name === 'Settings') {
-//               iconName = focused ? 'ios-list-box' : 'ios-list';
-//             }
-
-//             // You can return any component that you like here!
-//             return <Ionicons name={iconName} size={size} color={color} />;
-//           },
-//           tabBarActiveTintColor: 'tomato',
-//           tabBarInactiveTintColor: 'gray',
-//         })}
-//       >
-//         <Tab.Screen name="Home" component={HomeScreen} />
-//         <Tab.Screen name="Settings" component={SettingsScreen} />
-//       </Tab.Navigator>
-//     </NavigationContainer>
-//   );
-// }

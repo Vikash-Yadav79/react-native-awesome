@@ -22,7 +22,7 @@ export default function WelcomeScreen({navigation}) {
     <View style={styles.screenContainer}>
    
     <Button title="Continue with email "
-    onPress={() => navigation.navigate('user')}
+    onPress={() => navigation.navigate('SignIn')}
     />
    
     </View>

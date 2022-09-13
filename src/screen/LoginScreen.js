@@ -10,7 +10,7 @@ import {
 } from "react-native";
  
 export default function LoginScreen({navigation}) {
-  const [email, setEmail] = useState("");
+  const [userName, setUserName] = useState("");
   const [password, setPassword] = useState("");
  
   return (
@@ -22,9 +22,9 @@ export default function LoginScreen({navigation}) {
       <View style={styles.inputView}>
         <TextInput
           style={styles.TextInput}
-          placeholder="Email."
+          placeholder="Username"
           placeholderTextColor="#003f5c"
-          onChangeText={(email) => setEmail(email)}
+          onChangeText={(userName) => setUserName(userName)}
         />
       </View>
  
@@ -44,7 +44,7 @@ export default function LoginScreen({navigation}) {
  
       <TouchableOpacity
        style={styles.loginBtn}
-       onPress={() => navigation.navigate('Home')}>
+       onPress={() => navigation.navigate('user', { name: userName})}>
         <Text style={styles.loginText}>LOGIN</Text>
       </TouchableOpacity> 
     </View>

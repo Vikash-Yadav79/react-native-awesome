@@ -9,7 +9,7 @@ import FooterScreen from "./FooterScreen";
       <View style={{ flex: 1, alignItems: 'center', justifyContent: 'center' }}>
         <Text>dataScreen</Text>
       </View>
-      {/* <FooterScreen navigation={navigation}/> */}
+       <FooterScreen navigation={navigation}/> 
       </>
     );
   }
