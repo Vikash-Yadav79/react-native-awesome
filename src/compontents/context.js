@@ -2,4 +2,4 @@ import React from 'react';
 
 export const AuthContext = React.createContext();
 
-const MyContext = React.createContext(defaultValue);
+const MyContext = React.createContext();

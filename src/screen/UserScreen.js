@@ -12,19 +12,25 @@ import { Avatar, Badge } from "react-native-paper";
     return (
       <>
       <Text style={{fontWeight:'bold',fontSize:20,marginHorizontal:20}}>Tuesday, 13 Sepr</Text>
-     <Image
-             style={{ width:"10%", height: 35,marginHorizontal:350,marginTop:-25}}
+            <IconBadge
+    MainElement={
+       <Image
+             style={{ width:"10%", height: 45,marginHorizontal:350,marginTop:-20}}
             source={require('../../Images/notification.png' , )} 
-            Hidden={BadgeCount==0}
-            />
-            {/* <View style={styles.container} */}
-            {/* <Avatar
-               source={require('../../Images/notification.png' , )} 
-                size="large"
-               />
-               <Badge
-                 value="12"
-                 /> */}
+            /> 
+    }
+    BadgeElement={
+      <Text style={{color:'#FFFFFF'}}>{BadgeCount}</Text>
+    }
+    IconBadgeStyle={
+      {width:30,
+      height:30,
+     
+      backgroundColor: '#FF00EE'}
+    }
+    Hidden={BadgeCount==0}
+    />
+           
                  
             <Text style= {{fontWeight:'bold',fontSize:55, color:'black',marginHorizontal:20}} >Hi, {params.name}</Text>
             <Text style={{color:'black',fontWeight:'bold', fontSize:20,marginHorizontal:25}}>Hope you are  well today</Text>
