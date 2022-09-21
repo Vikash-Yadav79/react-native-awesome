@@ -5,7 +5,7 @@ import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 export default function FooterScreen({navigation}) {
   return (
     <View style={{flexDirection: 'row', marginTop: 30}}>
-      <TouchableOpacity>
+      <TouchableOpacity onPress={() => navigation.navigate('Home')}>
         <Image
           source={require('../../Images/home.png')}
           style={{

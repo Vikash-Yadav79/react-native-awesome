@@ -10,7 +10,7 @@ const FlexScreen = () => {
       flexDirection: "row"
     }]}>
     
-      <View style={{ flex: 1, backgroundColor: "#006B76", margin:5, borderRadius:20}}>
+      <View style={{ padding: 20,flex: 1, backgroundColor: "#006B76", margin:5, borderRadius:20}}>
        <Text style={styles.item}> Straighten Your Back</Text> 
       </View>
       <View style={{ padding: 20, flex: 1, backgroundColor: "#00BCD4" ,borderRadius:20,margin:5}}>

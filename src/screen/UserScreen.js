@@ -2,17 +2,37 @@ import React from "react";
 import {View, Text,Image,StyleSheet} from 'react-native';
 import FooterScreen from "./FooterScreen";
 import FlexScreen from "./FlexScreen";
+import IconBadge from 'react-native-icon-badge';
+import { Avatar, Badge } from "react-native-paper";
 
 
- export default function UserScreen({ navigation }) {
+ export default function UserScreen({route, navigation }) {
+    const params = route.params;
+    const BadgeCount = 12
     return (
       <>
-      <Text style={{fontWeight:'bold',fontSize:15,marginHorizontal:20}}>Tuesday, 23 Aug</Text>
-     <Image
-             style={{ width:"10%", height: 25,marginHorizontal:350,marginTop:-15}}
-            source={require('../../Images/notification.png')}
-            />
-            <Text style= {{fontWeight:'bold',fontSize:55, color:'black',marginHorizontal:20}} >Hi, Arthur!</Text>
+      <Text style={{fontWeight:'bold',fontSize:20,marginHorizontal:20}}>Tuesday, 13 Sepr</Text>
+            <IconBadge
+    MainElement={
+       <Image
+             style={{ width:"10%", height: 45,marginHorizontal:350,marginTop:-20}}
+            source={require('../../Images/notification.png' , )} 
+            /> 
+    }
+    BadgeElement={
+      <Text style={{color:'#FFFFFF'}}>{BadgeCount}</Text>
+    }
+    IconBadgeStyle={
+      {width:30,
+      height:30,
+     
+      backgroundColor: '#FF00EE'}
+    }
+    Hidden={BadgeCount==0}
+    />
+           
+                 
+            <Text style= {{fontWeight:'bold',fontSize:55, color:'black',marginHorizontal:20}} >Hi, {params.name}</Text>
             <Text style={{color:'black',fontWeight:'bold', fontSize:20,marginHorizontal:25}}>Hope you are  well today</Text>
             <Text style={{margin:30, color:'black',fontWeight:'bold'}}>Time Tracker</Text>
             
